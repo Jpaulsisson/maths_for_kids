@@ -69,7 +69,3 @@ def run_x_times(x: int, func, *func_args) -> list:
     result.append(val)
     i += 1
   return result
-
-print(
-run_x_times(10, generateDivisionProblem, 3, 2)
-)

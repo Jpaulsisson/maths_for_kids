@@ -82,17 +82,4 @@ function generateExponentProblem(digits, power) {
     power: power,
     solution: randomX ** power,
   }
-}
-
-console.log(generateAdditionProblem(2));
-console.log(generateAdditionProblem(4, 3));
-console.log(generateSubtractionProblem(3));
-console.log(generateSubtractionProblem(3));
-console.log(generateMultiplicationProblem(2));
-console.log(generateMultiplicationProblem(2));
-console.log(generateDivisionProblem(4));
-console.log(generateDivisionProblem(4, 3));
-console.log(generateExponentProblem(2, 10));
-
-// Returns a range between the lowest possible number with the amount of digits specified and the largest possible number with the amount of digits specified.
-// Example: digitHelper(3) will return a random value between 100 and 999, inclusively. 
+} 
