@@ -29,7 +29,7 @@ def generateAdditionProblem(digits, secondDigits=None) -> dict:
   
   return { "x": x, "y": y, "solution": x + y }
 
-def generateSubtractionProblem(digits, secondDigits=None, negativeAnswers=True) -> dict:
+def generateSubtractionProblem(digits, secondDigits=None, negativeAnswers=False) -> dict:
   if secondDigits > digits and negativeAnswers == False: return "This will only produce answers with negative values. Please change the digit amount of the second value or set negativeAnswers to true"
   xRange = getRangeEndpoints(digits)
   yRange = getRangeEndpoints(digits) if secondDigits == None else getRangeEndpoints(secondDigits)
@@ -41,19 +41,15 @@ def generateSubtractionProblem(digits, secondDigits=None, negativeAnswers=True) 
     while x - y < 0:
       x = getRandomIntInRange(xRange["start"], xRange["stop"])
       y = getRandomIntInRange(yRange["start"], yRange["stop"])
+      
   return { "x": x, "y": y, "solution": x - y }
 
-def generateMultiplicationProblem(digits, secondDigits=None, negativeAnswers=True) -> dict:
+def generateMultiplicationProblem(digits, secondDigits=None) -> dict:
   xRange = getRangeEndpoints(digits)
   yRange = getRangeEndpoints(digits) if secondDigits == None else getRangeEndpoints(secondDigits)
   
   x = getRandomIntInRange(xRange["start"], xRange["stop"])
   y = getRandomIntInRange(yRange["start"], yRange["stop"])
-  
-  if negativeAnswers == False:
-    while x - y < 0:
-      x = getRandomIntInRange(xRange["start"], xRange["stop"])
-      y = getRandomIntInRange(yRange["start"], yRange["stop"])
   
   return { "x": x, "y": y, "solution": x * y }
 
