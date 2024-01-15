@@ -16,7 +16,7 @@ function digitHelper(digits) {
 }
 
 // Max digits: 6, Differing digits possible, Decimals TBD
-function generateAdditionProblem(digits, secondDigits = null, decimalPlaces = null) {
+export function generateAdditionProblem(digits, secondDigits = null, decimalPlaces = null) {
   const x = digitHelper(digits);
   const y = secondDigits === null ? digitHelper(digits) : digitHelper(secondDigits);
 
@@ -82,4 +82,4 @@ function generateExponentProblem(digits, power) {
     power: power,
     solution: randomX ** power,
   }
-} 
+}

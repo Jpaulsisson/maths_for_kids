@@ -1,11 +1,27 @@
+:root {
+  --color1: hsl(176, 100%, 6%);
+  --color2: hsl(38, 10%, 8%);
+  --color3: hsl(180, 66%, 18%);
+  --color4: hsl(144, 32%, 77%);
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  color: var(--color4);
+  font-weight: 100;
 }
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  background-color: var(--color1);
+}
+
+body {
+  margin-inline: auto;
+  max-width: 900px;
+  padding: 2.5vw;
 }
