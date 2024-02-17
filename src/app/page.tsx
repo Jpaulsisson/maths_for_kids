@@ -13,7 +13,6 @@ export default function Home() {
     solution: 0,
   });
   const [answerSubmitted, setAnswerSubmitted] = useState(false);
-  const [answerCorrect, setAnswerCorrect] = useState(false);
 
   function handleGetNewProblem() {
     const { x, y, solution } = generateAdditionProblem(2);
