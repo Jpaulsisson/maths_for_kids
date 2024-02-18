@@ -140,5 +140,3 @@ def getMode(listOfNumbers):
         result["type"], result["mode"] = "single-mode", mode[0]
   return result
       
-
-

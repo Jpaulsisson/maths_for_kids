@@ -32,20 +32,7 @@ export default function Home() {
 
   return (
     <main>
-      <section className={styles.titleContainer}>
-        <h1>Math</h1>
-        <button onClick={handleGetNewProblem} className={styles.getProblemButton}>Get a problem</button>
-      </section>
-      <section className={styles.problemContainer}>
-        <h2>Solve:</h2>
-        <p>{problem.x} + {problem.y} = {correctAnswer ? '√ Great Job!' : '?'}</p>
-      </section>
-      <section className={styles.solutionContainer}>
-        <h2>Answer:</h2>
-        <input type='text' inputMode='numeric' value={userAnswer} onChange={(e: ChangeEvent<HTMLInputElement>) => {
-          setUserAnswer(Number(e.target.value))
-        }} className={styles.answerInput} />
-      </section>
+<h1>Clean slate</h1>
     </main>
   )
 }
